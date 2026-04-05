@@ -124,6 +124,33 @@ img {
   display: block; /* removes inline spacing issues */
 }
 
+blockquote::before {
+  content: "“";
+  font-size: 3rem;
+  color: var(--color-accent2);
+  margin-right: var(--space-sm);
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 1em;
+  background-color: var(--color-accent1);
+  margin-right: var(--space-sm);
+  vertical-align: middle;
+}
+
+/* Alternating row colours */
+tbody tr:nth-child(odd) {
+  background-color: var(--color-surface);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-accent2);
+  /*color: #fff;*/
+}
+
 header { 
 	display: block;
 	justify-content: space-between;
@@ -181,6 +208,56 @@ button, input, select {
   border-radius: 0.5rem; 
   padding: var(--space-sm); 
   /* Padding used so text inside buttons/inputs doesn’t touch the border */ 
+}
+
+/* Uniform form controls */
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  color: var(--color-text);
+
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-muted);
+  border-radius: 0.5rem;
+  background-color: var(--color-surface);
+
+  outline: none; /* remove default focus outline */
+  box-sizing: border-box;
+}
+
+/* Consistent focus state */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  border-color: var(--color-accent2);
+  box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.4); /* accent glow */
+  outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-accent2);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Background color transition on hover */
+button[type="submit"]:hover {
+  background-color: var(--color-accent1);
+}
+
+/* Transform scale on active */
+button[type="submit"]:active {
+  transform: scale(0.97);
 }
 
 .page-cards {
@@ -246,6 +323,23 @@ nav ul {
 	display: block;
 	flex-wrap: wrap;
 	gap: var(--space-sm);
+}
+
+/* Remove top border from first item and bottom border from last item */
+ul.results li {
+  border-top: 1px solid var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+  padding: var(--space-sm) var(--space-md);
+}
+
+/* First item: remove top border */
+ul.results li:first-child {
+  border-top: none;
+}
+
+/* Last item: remove bottom border */
+ul.results li:last-child {
+  border-bottom: none;
 }
 
 .two-column {
