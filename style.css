@@ -143,13 +143,11 @@ h2::before {
 
 /* Alternating row colours */
 tbody tr:nth-child(odd) {
-  background-color: var(--color-accent1);
-  color: #fff;
+  background-color: var(--color-surface);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--color-accent2);
-  color: #fff;
+  background-color: var(--color-secondary);
 }
 
 header { 
@@ -288,7 +286,7 @@ button[type="submit"]:active {
 nav a {
 	border: 1px solid var(--color-muted);
 	border-radius: 0.5rem;
-	color: var(--color-accent1);
+	color: var(--color-accent2);
 	padding: var(--space-sm) var(--space-md);
 	background-color: var(--color-surface);
   	text-decoration: none;
@@ -297,7 +295,7 @@ nav a {
 }
 
 nav a:hover {
-	color: var(--color-muted);
+	color: var(--color-accent2);
 	background-color: var(--color-accent1);
 }
 
@@ -313,7 +311,7 @@ nav a:focus {
 
 .logo {
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 	color: var(--color-accent1);
 }
 
