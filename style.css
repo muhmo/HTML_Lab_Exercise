@@ -143,12 +143,13 @@ h2::before {
 
 /* Alternating row colours */
 tbody tr:nth-child(odd) {
-  background-color: var(--color-surface);
+  background-color: var(--color-accent1);
+  color: #fff;
 }
 
 tbody tr:nth-child(even) {
   background-color: var(--color-accent2);
-  /*color: #fff;*/
+  color: #fff;
 }
 
 header { 
@@ -204,7 +205,7 @@ a:hover { color: var(--color-muted); text-decoration: underline; }
 a:active { color: var(--color-accent1); }
 
 button, input, select { 
-  border: 1px solid var(--color-muted); 
+  border: 1px solid var(--color-accent2); 
   border-radius: 0.5rem; 
   padding: var(--space-sm); 
   /* Padding used so text inside buttons/inputs doesn’t touch the border */ 
@@ -219,7 +220,7 @@ select {
   color: var(--color-text);
 
   padding: var(--space-sm) var(--space-md);
-  border: 1px solid var(--color-muted);
+  border: 1px solid var(--color-accent2);
   border-radius: 0.5rem;
   background-color: var(--color-surface);
 
