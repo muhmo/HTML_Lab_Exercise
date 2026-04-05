@@ -170,10 +170,28 @@ button, input, select {
   /* Padding used so text inside buttons/inputs doesn’t touch the border */ 
 }
 
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+  align-items: stretch;
+}
+
 .card {
   border-radius: 1rem;
   box-shadow: 0 0 0 3px var(--color-accent1);
   padding: 2rem;
+  background-color: var(--color-surface);
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 nav a {
@@ -215,4 +233,25 @@ nav ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--space-sm);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 280px;     /*main flexible, sidebar fixed*/
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.two-column article,
+.two-column aside,
+.two-column .featured {
+  background-color: var(--color-secondary);
+  padding: var(--space-md);
+  border-radius: 0.5rem;
+}
+
+.two-column .featured {
+  grid-column: span 2;
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
