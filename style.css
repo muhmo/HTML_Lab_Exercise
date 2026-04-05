@@ -148,7 +148,7 @@ h2::after {
   width: 6px;
   height: 1em;
   background-color: var(--color-accent2);
-  margin-right: var(--space-sm);
+  margin-left: var(--space-sm);
   vertical-align: middle;
 }
 
