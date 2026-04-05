@@ -118,8 +118,7 @@ nav {
   background-color: var(--color-secondary); 
   color: var(--color-accent1);
   padding: var(--space-sm); 
-  margin-bottom: var(--space-md); 
-  /* Padding for inner spacing of nav links, margin to separate nav from next section */ 
+  /* Padding for inner spacing of nav links */ 
 }
 
 main { 
