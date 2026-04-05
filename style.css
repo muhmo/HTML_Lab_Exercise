@@ -36,7 +36,6 @@ body {
 
 h1 {
   font-size: 3.2rem;
-  text-align: center;
   line-height: 1.2;
   color: var(--color-text);
   font-family: var(--font-heading);
@@ -44,6 +43,7 @@ h1 {
 
 h2 {
   font-size: 2.4rem;
+  text-align: center;
   line-height: 1.3;
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -108,7 +108,7 @@ figcaption {
 
 /* Landmarks */
 header { 
-  background-color: var(--color-primary); 
+  background-color: var(--color-primary);
   color: var(--color-text); 
   padding: var(--space-md); 
   /* Using padding to create space inside header around text */ 
@@ -161,4 +161,6 @@ nav a {
 	padding: var(--space-sm);
 	background-color: var(--color-surface);
   	text-decoration: none;
+  	display: block;
+  	margin-bottom: var(--space-md);
 }
