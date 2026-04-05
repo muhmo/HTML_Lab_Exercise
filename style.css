@@ -31,6 +31,7 @@ body {
  --color-secondary: #f5f5dc;
  --color-accent1: #ff1493;
  --color-accent2: #8b4513;
+ --color-white-text: #fff;
  --color-text: #1a1a1a;
  --color-muted: #666666;
  --color-surface: #f5f4f0;
@@ -136,7 +137,17 @@ h2::before {
   display: inline-block;
   width: 6px;
   height: 1em;
-  background-color: var(--color-accent1);
+  background-color: var(--color-accent2);
+  margin-right: var(--space-sm);
+  vertical-align: middle;
+}
+
+h2::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 1em;
+  background-color: var(--color-accent2);
   margin-right: var(--space-sm);
   vertical-align: middle;
 }
@@ -191,7 +202,7 @@ main {
 
 footer { 
   background-color: var(--color-primary); 
-  color: #fff; 
+  color: var(color-white-text); 
   padding: var(--space-md); 
   margin-top: var(--space-lg); 
   /* Padding for inside spacing, margin to push footer away from main content */ 
