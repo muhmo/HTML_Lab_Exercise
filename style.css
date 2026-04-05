@@ -232,7 +232,7 @@ textarea:focus,
 select:focus,
 button:focus {
   border-color: var(--color-accent2);
-  box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.4); /* accent glow */
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.4); /* accent glow */
   outline: none;
 }
 
