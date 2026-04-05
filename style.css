@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* ============================================
+ BREAKPOINTS
+ mobile-first base: 320px and up (default)
+ tablet: @media (min-width: 600px)
+ desktop: @media (min-width: 1024px)
+ ============================================ */
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; 
@@ -111,12 +118,18 @@ figcaption {
   /* Margin separates caption from the image above */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* removes inline spacing issues */
+}
+
 header { 
-	display: flex;
+	display: block;
 	justify-content: space-between;
-	align-items: center	;
-  	background-color: var(--color-primary); 
-  	padding: var(--space-md); 
+	text-align: center;
+  background-color: var(--color-primary); 
+	padding: var(--space-md); 
   /* Using padding to create space inside header around text */ 
 }
 
@@ -172,7 +185,7 @@ button, input, select {
 
 .page-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;     /* single column */
   gap: var(--space-md);
   align-items: stretch;
 }
@@ -230,14 +243,14 @@ nav ul {
 	list-style: none;		/*remove bullets*/
 	margin: 0;
 	padding: 0;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
 	gap: var(--space-sm);
 }
 
 .two-column {
   display: grid;
-  grid-template-columns: 1fr 280px;     /*main flexible, sidebar fixed*/
+  grid-template-columns: 1fr;     /*single column*/
   gap: var(--space-md);
   margin-top: var(--space-lg);
 }
@@ -254,4 +267,60 @@ nav ul {
   grid-column: span 2;
   background-color: var(--color-primary);
   color: var(--color-text);
+}
+
+@media (min-width: 600px) {
+
+  body {
+    font-size: 1.7rem; /* slightly larger text */
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  /* Nav links horizontal row */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  /* Card grid switches to 2 columns */
+  .page-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Sidebar layout activates */
+  .two-column {
+    grid-template-columns: 1fr 280px;
+    gap: 1.5rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.8rem; /* larger text for desktop */
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  /* Full 3-column card grid */
+  .page-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Wider main + sidebar */
+  .two-column {
+    grid-template-columns: 2fr 320px;
+    gap: 2rem;
+  }
+
 }
