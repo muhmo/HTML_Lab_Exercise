@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio of Alya, a software engineering student at UTM.">
+  <title>Lab Exercise 1</title>
+</head>
+
+<body>
+  <header>
+    <h1>Nur Alya binti Abd Rani</h1>
+    <p>Complex question can only be solved by patience.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="academic.html">Academic Results</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 style="background-color: hotpink; color: black;  font-size: 26px;">Contact Me</h2>
+    <form action="#" method="post" style="background-color: beige;">
+
+      <fieldset style="border:1px solid; padding:10px;">
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required maxlength="60"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required maxlength="60"><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required maxlength="12"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Your age" required><br><br>
+
+        <label for="date">Contact Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="range">Portfolio Satisfaction (1-10):</label>
+        <input type="range" id="range" name="range" min="1" max="10"><br><br>
+
+        <label for="textarea">Message:</label><br>
+        <input id="textarea" name="textarea" required maxlength="120"><br><br>
+      </fieldset>
+
+      <fieldset style="border:1px solid; padding:10px;">
+        <legend>Subject</legend>
+        <label for="subject">Choose a Subject:</label>
+
+        <select id="subject" name="subject">
+
+          <optgroup label="General">
+            <option value="feedback">Feedback</option>
+            <option value="inquiry">Inquiry</option>
+          </optgroup>
+
+          <optgroup label="Project">
+            <option value="collaboration">Collaboration</option>
+            <option value="support">Support</option>
+          </optgroup>
+
+        </select>
+      </fieldset>
+
+      <fieldset style="border:1px solid; padding:10px;">
+        <legend>Preferences</legend>
+        <p>Topics of Interest:</p>
+        <input type="checkbox" id="sr" name="interest" value="requirement">
+        <label for="sr">Software Requirement</label><br>
+
+        <input type="checkbox" id="os" name="interest" value="os">
+        <label for="os">Operating Systems</label><br>
+
+        <input type="checkbox" id="db" name="interest" value="db">
+        <label for="db">Databases</label><br>
+
+        <p>Preferred Contact Method:</p>
+        <input type="radio" id="emailContact" name="contactMethod" value="email" required>
+        <label for="emailContact">Email</label><br>
+
+        <input type="radio" id="phoneContact" name="contactMethod" value="phone">
+        <label for="phoneContact">Phone</label><br>
+
+        <input type="radio" id="whatsappContact" name="contactMethod" value="whatsapp">
+        <label for="whatsappContact">WhatsApp</label><br><br>
+
+        <button type="button" onclick="alert('Successful!')">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <address>Contact: alya-05@graduate.utm.my</address>
+    <small>2026 All rights reserved.</small>
+  </footer>
+</body>
+</html>
