@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 html {
   box-sizing: border-box;
@@ -66,6 +66,7 @@ h4 {
 
 p {
   font-size: 1.6rem;
+  font-family: var(--font-body);
   line-height: 1.6;
   color: var(--color-text);
   margin-bottom: var(--space-md); 
@@ -74,12 +75,14 @@ p {
 
 small {
   font-size: 1.2rem;
+  font-family: var(--font-body);
   line-height: 1.4;
   color: var(--color-muted);
 }
 
 blockquote {
   font-size: 1.8rem;
+  font-family: var(--font-body);
   line-height: 1.6;
   color: var(--color-text);
   margin: var(--space-md) 0;
@@ -90,6 +93,7 @@ blockquote {
 
 code {
   font-size: 1.4rem;
+  font-family: var(--font-body);
   line-height: 1.4;
   color: var(--color-text);
   background-color: var(--color-surface);
@@ -100,25 +104,45 @@ code {
 
 figcaption {
   font-size: 1.4rem;
+  font-family: var(--font-body);
   line-height: 1.4;
   color: var(--color-muted);
   margin-top: var(--space-sm);
   /* Margin separates caption from the image above */
 }
 
-/* Landmarks */
 header { 
-  background-color: var(--color-primary);
-  color: var(--color-text); 
-  padding: var(--space-md); 
+	display: flex;
+	justify-content: space-between;
+	align-items: center	;
+  	background-color: var(--color-primary); 
+  	padding: var(--space-md); 
   /* Using padding to create space inside header around text */ 
 }
 
+.header-text {
+	max-width: 60%;
+	color: var(--color-accent1);
+}
+
+.header-image img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: var(--color-muted);
+}
+
 nav { 
-  background-color: var(--color-secondary); 
-  color: var(--color-accent1);
-  padding: var(--space-sm); 
-  /* Padding for inner spacing of nav links */ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-secondary); 
+	padding: var(--space-sm) var(--space-md); 
+  	/* Padding for inner spacing of nav links */ 
+
+  	position: sticky;
+  	top: 0;
+  	z-index: 1000;
 }
 
 main { 
@@ -128,19 +152,17 @@ main {
 
 footer { 
   background-color: var(--color-primary); 
-  color: var(--color-text); 
+  color: #fff; 
   padding: var(--space-md); 
   margin-top: var(--space-lg); 
   /* Padding for inside spacing, margin to push footer away from main content */ 
 }
 
-/* Links */
-a:link { color: var(--color-accent1); }
-a:visited { color: var(--color-primary); }
+a:link { color: var(--color-accent2); }
+a:visited { color: var(--color-muted); }
 a:hover { color: var(--color-muted); text-decoration: underline; }
-a:active { color: var(--color-accent2); }
+a:active { color: var(--color-accent1); }
 
-/* Border Radius */
 button, input, select { 
   border: 1px solid var(--color-muted); 
   border-radius: 0.5rem; 
@@ -150,16 +172,47 @@ button, input, select {
 
 .card {
   border-radius: 1rem;
-  box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 3px var(--color-accent1);
   padding: 2rem;
 }
 
 nav a {
 	border: 1px solid var(--color-muted);
 	border-radius: 0.5rem;
-	padding: var(--space-sm);
+	color: var(--color-accent1);
+	padding: var(--space-sm) var(--space-md);
 	background-color: var(--color-surface);
   	text-decoration: none;
   	display: inline-block;
-  	margin-bottom: var(--space-sm);
+  	transition: color 0.2s, background-color 0.2s;
+}
+
+nav a:hover {
+	color: var(--color-muted);
+	background-color: var(--color-accent1);
+}
+
+nav a.active {
+	border-bottom: 3px solid var(--color-accent1);
+	font-weight: bold;
+}
+
+nav a:focus {
+  outline: 2px solid var(--color-accent1);
+  outline-offset: 2px;
+}
+
+.logo {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: var(--color-accent1);
+}
+
+nav ul {
+	list-style: none;		/*remove bullets*/
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
 }
