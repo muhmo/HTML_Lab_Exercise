@@ -255,3 +255,8 @@ nav ul {
   background-color: var(--color-surface);
   color: var(--color-text);
 }
+
+.two-column aside {
+  margin-top: 0;        /* reduce top margin */
+  align-self: start;    /* align sidebar to the top of the grid row */
+}
