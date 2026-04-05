@@ -161,6 +161,6 @@ nav a {
 	padding: var(--space-sm);
 	background-color: var(--color-surface);
   	text-decoration: none;
-  	display: block;
-  	margin-bottom: var(--space-md);
+  	display: inline-block;
+  	margin-bottom: var(--space-sm);
 }
